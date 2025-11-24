@@ -72,6 +72,8 @@ function crearFranjasHorarias(){
 function configurarEventListeners(){
     console.log('Configurando los eventos');
     const toggleButton = document.querySelector('#toggleButton');
+    toggleButton.addEventListener('click', toggleActivitiesList);
+
     registerButton.addEventListener('click', registerReservation);
     console.log('Evento Registrado correctamente');
 
