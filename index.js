@@ -33,7 +33,7 @@ function poblarTablaActividades(){
                 <td>${act.nombre}</td>
                 <td>${act.duracion}</td>
                 <td>${act.intensidad}</td>
-                <td>${act.foto}<td>
+                <td><img src="${act.foto}" alt="${act.nombre}" width="100"></td>      
             </tr>
         `;
     });
