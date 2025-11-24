@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reservas del Gimnasio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Gestión de Reservas del Gimnasio</h1>
+    </div>
+    
+    <div class="container">
+        <!-- CONTENEDOR PARA LA COLUMNA IZQUIERDA Y EL BOTÓN -->
+        <div class="left-section">
+            <!-- BOTÓN AHORA ESTÁ FUERA DE left-column -->
+            <button class="toggle-button" id="toggleButton">
+                Mostrar/Ocultar Lista de Actividades
+            </button>
+            
+            <!-- Columna izquierda (solo la tabla) -->
+            <div class="left-column" id="leftColumn">
+                <table class="activities-table">
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Duración (min)</th>
+                            <th>Intensidad</th>
+                            <th>Foto</th>
+                        </tr>
+                    </thead>
+                    <tbody id="activitiesTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Columna derecha -->
+        <div class="right-column">
+            <div class="controls">
+                <div class="control-group">
+                    <label>Actividad</label>
+                    <select id="activitySelect"></select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Número de personas</label>
+                    <select id="peopleSelect">
+                        <option value="1">1 persona</option>
+                        <option value="2">2 personas</option>
+                        <option value="3">3 personas</option>
+                        <option value="4">4 personas</option>
+                        <option value="5">5 personas</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label>Franja horaria</label>
+                    <select id="timeSlotSelect">
+                        <option value="09:00">09:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="19:00">19:00</option>
+                    </select>
+                </div>
+                
+                <button class="register-button" id="registerButton">
+                    Registrar Reserva
+                </button>
+            </div>
+            
+            <div class="time-slots" id="timeSlots"></div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal" id="detailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Detalles de reservas</h2>
+                <button class="close-button" id="closeButton">&times;</button>
+            </div>
+            <div class="modal-body">
+                <table class="modal-table">
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Personas</th>
+                            <th>Duración (min)</th>
+                            <th>Carga Total (min)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="modalTableBody"></tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="3">TOTAL ACUMULADO</td>
+                            <td id="totalMinutes">0 min</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
