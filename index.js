@@ -104,6 +104,9 @@ function configurarEventListeners() {
             }
         });
     });
+
+    /*closest() es un método que busca hacia arriba en el árbol DOM (desde el elemento 
+    donde hiciste click hacia sus padres) hasta encontrar un elemento que coincida con el selector que le pasas.*/
     
     //boton de cerrar modal
     const closeButton = document.querySelector('#closeButton');
