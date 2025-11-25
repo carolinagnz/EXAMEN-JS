@@ -98,9 +98,7 @@ function configurarEventListeners() {
         abrirModal(franja);
         });
     });
-
-    /*closest() es un método que busca hacia arriba en el árbol DOM (desde el elemento 
-    donde hiciste click hacia sus padres) hasta encontrar un elemento que coincida con el selector que le pasas.*/
+    console.log('Event listeners de las tarjetas de franjas horarias configurados');
     
     //boton de cerrar modal
     const closeButton = document.querySelector('#closeButton');
