@@ -91,17 +91,11 @@ function configurarEventListeners() {
     //event listeners para las tarjetas de franjas horarias
     const tarjetas = document.querySelectorAll('.time-slot');
     
-    tarjetas.forEach(tarjeta => {
-        tarjeta.addEventListener('click', function(e) {
-            // Solo abrir modal si NO se hace clic en una reserva
-            if (!e.target.closest('.reservation-item')) {
-                // Obtenemos el indice desde el dataset
-                const index = parseInt(this.dataset.index);
-                // Obtenemos la franja correspondiente del array
-                const franja = franjasHorarias[index];
-                console.log(`Click en tarjeta con índice ${index}, franja: ${franja}`);
-                abrirModal(franja);
-            }
+   tarjetas.forEach(tarjeta => {
+    tarjeta.addEventListener('click', function(e) {
+        const index = parseInt(this.dataset.index);
+        const franja = franjasHorarias[index];
+        abrirModal(franja);
         });
     });
 
